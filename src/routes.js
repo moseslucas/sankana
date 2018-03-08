@@ -2,16 +2,14 @@ import React from 'react'
 import {Route} from 'react-router-dom'
 import  App from './components/layout/App'
 import Home from './components/Home'
-import Points from './components/Points'
-import Today from './components/Today'
-import Week from './components/Week'
+import Broadcaster from './components/Broadcaster'
+import Tracker from './components/Tracker'
 
 const Routes = _ => {
   return <App>
     <Route exact path='/' component={Home}/>
-    <Route path='/MyPoints' component={Points}/>
-    <Route path='/Today' component={Today}/>
-    <Route path='/Week' component={Week}/>
+    <Route exact path='/broadcaster' component={Broadcaster}/>
+    <Route exact path='/tracker' component={Tracker}/>
   </App>
 }
 

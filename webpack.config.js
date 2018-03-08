@@ -9,8 +9,7 @@ module.exports = {
   },  
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './build',
-    port: 3003
+    contentBase: './build'
   },  
   plugins: [
     new webpack.optimize.UglifyJsPlugin(), //minify everything
