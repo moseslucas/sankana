@@ -1,5 +1,6 @@
 import React from 'react'
 import {createSocket} from '../utils/helpers'
+import RaisedButton from 'material-ui/RaisedButton'
 
 class Broadcaster extends React.Component { 
   constructor (props) {
@@ -31,9 +32,14 @@ class Broadcaster extends React.Component {
     })  
   }
   render () {
-    return <div>
-      <button onClick={this.startBroadcast}>Broadcast</button>
-    </div>
+    return <React.Fragment>
+      <center>
+      <RaisedButton 
+        label="Start broadcasting" 
+        secondary
+        onClick={this.startBroadcast}/>
+      </center>
+    </React.Fragment>
   }
 }
 
