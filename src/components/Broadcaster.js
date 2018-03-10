@@ -8,22 +8,16 @@ class Broadcaster extends React.Component {
     this.subscription = {}
   }
 
-  componentDidMount () {
-    this.subscription = createSocket({
-      channel: 'NasanaChannel',
-      connected: function() { console.log("cable: connected") },
-      disconnected: function() { console.log("cable: disconnected") },
-      received: (data) => { console.log("cable received: ", data); } 
-    })
-  }
 
   startBroadcast () {
+    this.subscription = createSocket({channel: 'NasanaChannel'})
     setInterval(_ => {
       this.setCurrentPosition()
       .then((data)=> {
         this.subscription.perform('broadcast_position_to_tracker', {
           lat: data.coords.latitude,
-          lng: data.coords.longitude
+          lng: data.coords.longitude,
+          code: localStorage.CODE
         })
       })
     }, 3000)
