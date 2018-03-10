@@ -8,8 +8,6 @@ import Tracker from './components/Tracker'
 const Routes = _ => {
   return <App>
     <Route exact path='/' component={Home}/>
-    <Route exact path='/broadcaster' component={Broadcaster}/>
-    <Route exact path='/tracker' component={Tracker}/>
   </App>
 }
 

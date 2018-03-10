@@ -13,7 +13,10 @@ module.exports = {
   },  
   plugins: [
     new webpack.optimize.UglifyJsPlugin(), //minify everything
-    new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new webpack.DefinePlugin({
+      '__WS__': JSON.stringify('ws://localhost:3000/cable')
+    })
   ],
   module: {
     rules: [

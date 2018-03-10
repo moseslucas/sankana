@@ -18,7 +18,6 @@ class Home extends React.Component {
     }
   }
 
-
   render () {
     return <Tabs>
       <Tab label="SHARE LOCATION">
