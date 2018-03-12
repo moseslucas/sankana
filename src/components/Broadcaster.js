@@ -16,12 +16,16 @@ class Broadcaster extends React.Component {
       code: localStorage.CODE
     })
     setInterval(_ => {
-      this.setCurrentPosition()
-      .then((data)=> {
-        this.subscription.perform('broadcast_position_to_tracker', {
-          lat: data.coords.latitude,
-          lng: data.coords.longitude
-        })
+      // this.setCurrentPosition()
+      // .then((data)=> {
+      //   this.subscription.perform('broadcast_position_to_tracker', {
+      //     lat: data.coords.latitude,
+      //     lng: data.coords.longitude
+      //   })
+      // })
+      this.subscription.perform('broadcast_position_to_tracker', {
+        lat: 1,
+        lng: 2
       })
     }, 3000)
   }
