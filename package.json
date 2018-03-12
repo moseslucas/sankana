@@ -10,7 +10,7 @@
     "start": "webpack-dev-server --open",
     "build": "npm run clean && npm run compile",
     "clean": "rimraf ./build/index.bundle.js",
-    "compile": "NODE_ENV=production webpack --config ./webpack.config.js --progress"
+    "compile": "NODE_ENV=production webpack --config ./webpack.config.prod.js --progress"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

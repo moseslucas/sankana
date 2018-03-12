@@ -8,7 +8,7 @@ export const createSocket = ({
   received
 }) => {
   let App = {}; 
-  App.cable = ActionCable.createConsumer('ws://localhost:3000/cable', code) 
+  App.cable = ActionCable.createConsumer(__WS__, code) 
   return App.cable.subscriptions.create({channel}, {
     connected,
     disconnected,
